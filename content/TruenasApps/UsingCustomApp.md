@@ -112,9 +112,9 @@ To deploy a third-party application using the **Install iX App** wizard, go to *
 
    Use the dropdown to select a **Restart Policy** to use for the container.
 
-  If needed, select the options to disable health check built into the container, enable a pseudo-TTY (or pseudo-terminal) for the container, or to keep the standard input (stdin) stream for the container open, for example for an interactive application that needs to remain ready to accept input.
+   If needed, select the options to disable health check built into the container, enable a pseudo-TTY (or pseudo-terminal) for the container, or to keep the standard input (stdin) stream for the container open, for example for an interactive application that needs to remain ready to accept input.
 
-4. Enter any required settings in **Security Context Configuration**.
+5. Enter any required settings in **Security Context Configuration**.
 
    {{< trueimage src="/images/SCALE/Apps/InstallCustomAppSecurityContextConfiguration.png" alt="Security Context Configuration Settings" id="Security Context Configuration Settings" >}}
 
@@ -132,7 +132,7 @@ To deploy a third-party application using the **Install iX App** wizard, go to *
    If you need to define a user to run the container, select **Custom User** to display the **User ID** and **Group ID** fields.
    Enter the numeric UID and GID of the user that runs the container. The default UID/GID is **568**/**568** (apps/apps).
 
-5. Enter the **Network Configuration** settings.
+6. Enter the **Network Configuration** settings.
 
    {{< trueimage src="/images/SCALE/Apps/InstallCustomAppNetworking.png" alt="Network Configuration Settings" id="Network Configuration Settings" >}}
 
@@ -169,7 +169,7 @@ To deploy a third-party application using the **Install iX App** wizard, go to *
    Click again to add another option.
    See the Linux [options](https://www.man7.org/linux/man-pages/man5/resolv.conf.5.html) documentation for more information.
 
-6. Use the **Portal Configuration** settings to set up a web UI portal if the application includes a GUI.
+7. Use the **Portal Configuration** settings to set up a web UI portal if the application includes a GUI.
 
    {{< trueimage src="/images/SCALE/Apps/InstallCustomAppAddPortalConfiguration.png" alt="Portal Configuration Settings" id="Portal Configuration Settings" >}}
 
@@ -189,7 +189,7 @@ To deploy a third-party application using the **Install iX App** wizard, go to *
 
    If needed, enter a custom **Path** for portal access, for example */admin*. Defaults to */*. The path is appended to the host IP and port, as in **truenas.local:15000/admin**.
 
-7. Add the **Storage** settings.
+8. Add the **Storage** settings.
    Review the image documentation for required storage volumes.
    See [Setting up Storage](#setting-up-app-storage) above for more information.
 
@@ -280,11 +280,11 @@ To deploy a third-party application using the **Install iX App** wizard, go to *
    Enter the maximum size of the temporary directory in mebibytes in **Tmpfs Size Limit (in Mi)** or accept the default of *500*.
    {{< /expand >}}
 
-8. {{< include file="/static/includes/apps/AppInstallWizardResourceConfig.md" >}}
+9. {{< include file="/static/includes/apps/AppInstallWizardResourceConfig.md" >}}
 
-9. Use **GPU Configuration** to allocate GPU resources if available and required for the application.
+10. Use **GPU Configuration** to allocate GPU resources if available and required for the application.
 
-10. Click **Install** to deploy the container.
+11. Click **Install** to deploy the container.
     If you correctly configured the app, the widget displays on the **Installed Applications** screen.
 
     When complete, the container becomes active.
